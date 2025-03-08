@@ -1,18 +1,14 @@
-# test variables
-export BLABLA="hello123"
-export TEST_VAR="imatestvar"
-
-# zsh mods
-# export PROMPT='%F{51}steven%f:~$ '
-parse_git_branch() {
-  git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p'
-}
-COLOR_DEF="%f"
-COLOR_NAME="%F{#bfe6b1}"
-COLOR_GIT="%F{#89b4fa}"
-COLOR_FOLDER="%F{#f38ba8}"
-setopt PROMPT_SUBST
-export PROMPT='${COLOR_NAME}steven%f ${COLOR_FOLDER}%1d ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF}% :~$ '
+# # zsh mods
+# # export PROMPT='%F{51}steven%f:~$ '
+# parse_git_branch() {
+#   git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p'
+# }
+# COLOR_DEF="%f"
+# COLOR_NAME="%F{#bfe6b1}"
+# COLOR_GIT="%F{#89b4fa}"
+# COLOR_FOLDER="%F{#f38ba8}"
+# setopt PROMPT_SUBST
+# export PROMPT='${COLOR_NAME}steven%f ${COLOR_FOLDER}%1d ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF}% :~$ '
 
 # java
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home
@@ -21,32 +17,12 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Conten
 export PATH="$PATH:$HOME/go/bin"
 
 # poetry
-export PATH="/Users/steven.locorotondo/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv > /dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-
-# sublime text
-# export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
-
-export PATH="$PATH:$HOME/.krew/bin"
-
-# set AWS profile
-# export AWS_PROFILE=steven
-
-# VMware Fusion command-line utils
-export PATH=$PATH:"/Applications/VMware Fusion.app/Contents/Library"
-
-# vscode
-export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
-
-# mysql
-export PATH="/usr/local/opt/mysql-client/bin:$PATH"
-
-# load syntx highlighting (should be last)
-source /Users/steven.locorotondo/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # standard text editor
 export EDITOR="nv"
@@ -113,7 +89,6 @@ alias cat="bat"
 
 alias ls="eza"
 alias ll="eza -alh"
-# alias ll="ls -alh"
 
 alias lg="lazygit"
 
@@ -156,16 +131,16 @@ EOF
 }
 
 function export_mlp_vars() {
-  export MLP_METADATA_PATH=/Users/steven.locorotondo/Desktop/repos/ml-platform-metadata
-  export MLP_TERRAFORM_PATH=/Users/steven.locorotondo/Desktop/repos/ml-platform/terraform/modules
-  export MLP_VERSION_FILE=/Users/steven.locorotondo/Desktop/repos/ml-platform-metadata/.mlp-version
+  export MLP_METADATA_PATH=$HOME/Desktop/repos/ml-platform-metadata
+  export MLP_TERRAFORM_PATH=$HOME/Desktop/repos/ml-platform/terraform/modules
+  export MLP_VERSION_FILE=$HOME/Desktop/repos/ml-platform-metadata/.mlp-version
 }
 
 # update OneMLP cli
 alias update_mlp="gsutil cp gs://jet-ml-infra-platform-artifacts/ml-platform/cli/latest/mlp-macos-py310.pex /usr/local/bin/mlp && chmod +x /usr/local/bin/mlp"
 
 # mlp cli dev
-alias mlp_dev="/Users/steven.locorotondo/Desktop/repos/ml-platform/dist/python.cli/mlp-macos.pex"
+alias mlp_dev="$HOME/Desktop/repos/ml-platform/dist/python.cli/mlp-macos.pex"
 
 # pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
@@ -175,7 +150,7 @@ alias k="kubectl"
 
 # neovim
 alias nv="nvim"
-alias nvc='nvim $HOME/.config/nvim'
+alias nvc="nvim $HOME/.config/nvim"
 
 # duckdb
 alias ddb="duckdb"
@@ -201,16 +176,19 @@ export PATH="/usr/local/opt/mysql@8.0/bin:$PATH"
 . "$HOME/.cargo/env"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/steven.locorotondo/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/steven.locorotondo/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/steven.locorotondo/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/steven.locorotondo/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi
 
 # set python interpreter for gcloud cli
-export CLOUDSDK_PYTHON="/Users/steven.locorotondo/.pyenv/versions/3.11.8/bin/python"
+export CLOUDSDK_PYTHON="$HOME/.pyenv/versions/3.11.8/bin/python"
 
-# Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+# uv shell autocomplete
 eval "$(uv generate-shell-completion zsh)"
 
+# starship command line prompt
 eval "$(starship init zsh)"
+
+# load syntx highlighting (should be last)
+source "$HOME"/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
