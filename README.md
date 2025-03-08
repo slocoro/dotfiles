@@ -37,3 +37,8 @@ To track a new set of dotfiles create a directory in the root of this project an
 ```
 rsync -R .config/karabiner/karabiner.json dotfiles/karabiner
 ```
+
+### TODO
+
+- automate installation of all packages using script
+
