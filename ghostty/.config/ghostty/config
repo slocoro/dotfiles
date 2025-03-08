@@ -23,4 +23,4 @@ window-inherit-working-directory = false
 
 
 ### KEYBINDS
-keybind = global:§=toggle_quick_terminal
+# keybind = global:§=toggle_quick_terminal
