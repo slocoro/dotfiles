@@ -1,0 +1,26 @@
+theme = tokyonight-storm
+
+# spacing between lines
+adjust-cell-height = 25%
+
+copy-on-select = true
+
+background-opacity = 0.98
+
+font-size = 14
+font-feature = -calt
+font-feature = -dlig
+font-feature = -liga
+
+window-padding-x = 10
+
+macos-auto-secure-input = false
+macos-secure-input-indication = false
+# macos-titlebar-style = tabs
+
+working-directory = home
+window-inherit-working-directory = false
+
+
+### KEYBINDS
+keybind = global:§=toggle_quick_terminal
