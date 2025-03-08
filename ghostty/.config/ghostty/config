@@ -5,7 +5,7 @@ adjust-cell-height = 25%
 
 copy-on-select = true
 
-background-opacity = 0.98
+# background-opacity = 0.995
 
 font-size = 14
 font-feature = -calt
