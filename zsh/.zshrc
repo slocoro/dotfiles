@@ -190,5 +190,15 @@ eval "$(uv generate-shell-completion zsh)"
 # starship command line prompt
 eval "$(starship init zsh)"
 
+# go task completion
+eval "$(task --completion zsh)"
+
 # load syntx highlighting (should be last)
 source "$HOME"/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# The following lines were added by compinstall
+zstyle :compinstall filename '/Users/steven.locorotondo/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
