@@ -1,4 +1,4 @@
-theme = tokyonight-storm
+theme = OneHalfDark
 
 # spacing between lines
 adjust-cell-height = 30%
@@ -20,7 +20,6 @@ macos-secure-input-indication = false
 
 working-directory = home
 window-inherit-working-directory = false
-
 
 ### KEYBINDS
 # keybind = global:§=toggle_quick_terminal
