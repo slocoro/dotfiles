@@ -30,10 +30,10 @@ export EDITOR="nv"
 # fzf commands for shell (ctrl-r to fuzzy find history)
 source <(fzf --zsh)
 
-# start tmux session called hack if none is active
+# start tmux session called default if none is active
 if command -v tmux > /dev/null 2>&1 && [[ -z "$TMUX" ]]; then
-  # Try to attach to an existing 'hack' session; if it doesn't exist, create it.
-  tmux attach-session -t hack || tmux new-session -s default
+  # Try to attach to an existing 'default' session; if it doesn't exist, create it.
+  tmux attach-session -t default || tmux new-session -s default
 fi
 
 # create tmux session after fuzzy finding directory
@@ -147,10 +147,18 @@ alias path='echo $PATH | tr -s ":" "\n"'
 
 # kubernetes
 alias k="kubectl"
+alias kx="kubectx"
 
 # neovim
-alias nv="nvim"
+alias nv=/usr/local/bin/nvim
 alias nvc="nvim $HOME/.config/nvim"
+function nvo() {
+  local selection
+  selection=$(ls --absolute ~/Desktop/repos | fzf)
+  if [ -n "$selection" ]; then
+    cd "$selection" && nvim
+  fi
+}
 
 # duckdb
 alias ddb="duckdb"
@@ -159,7 +167,7 @@ alias ddb="duckdb"
 alias zedo="dir=\$(find ~/Desktop/repos -type d ! -name '.*' -maxdepth 1 | fzf); if [[ -n \$dir ]]; then zed \"\$dir\"; fi"
 
 # function to clean __pycache__ and .pyc and .pyo
-pyclean() {
+function pyclean() {
   find . -type f -name '*.py[co]' -delete -o -type d -name __pycache__ -delete
 }
 
