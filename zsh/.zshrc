@@ -171,6 +171,9 @@ function pyclean() {
   find . -type f -name '*.py[co]' -delete -o -type d -name __pycache__ -delete
 }
 
+# aws
+alias awslogin="profile=\$(aws configure list-profiles | fzf); if [[ -n \$profile ]]; then aws sso login --profile \"\$profile\"; fi"
+
 # gcp kubernetes auth, prevents error in astro-ml-local
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
