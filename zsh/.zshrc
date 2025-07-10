@@ -137,7 +137,7 @@ function export_mlp_vars() {
 }
 
 # update OneMLP cli
-alias update_mlp="gsutil cp gs://jet-ml-infra-platform-artifacts/ml-platform/cli/latest/mlp-macos-py310.pex /usr/local/bin/mlp && chmod +x /usr/local/bin/mlp"
+alias update_mlp="gsutil cp gs://jet-ml-infra-platform-artifacts/ml-platform/cli/latest/mlp-macos-py310.pex /Users/steven.locorotondo/.local/bin/mlp && chmod +x /Users/steven.locorotondo/.local/bin/mlp"
 
 # mlp cli dev
 alias mlp_dev="$HOME/Desktop/repos/ml-platform/dist/python.cli/mlp-macos.pex"
