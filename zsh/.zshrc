@@ -147,6 +147,7 @@ alias path='echo $PATH | tr -s ":" "\n"'
 
 # kubernetes
 alias k="kubectl"
+
 alias kx="kubectx"
 
 # neovim
@@ -178,7 +179,7 @@ alias awslogin="profile=\$(aws configure list-profiles | fzf); if [[ -n \$profil
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 # pipx
-export PIPX_DEFAULT_PYTHON="$HOME/.pyenv/versions/3.9.16/bin/python"
+export PIPX_DEFAULT_PYTHON="$HOME/.pyenv/versions/3.10.18/bin/python"
 
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 export PATH="/usr/local/opt/mysql-client@8.0/bin:$PATH"
