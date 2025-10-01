@@ -11,7 +11,7 @@
 # export PROMPT='${COLOR_NAME}steven%f ${COLOR_FOLDER}%1d ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF}% :~$ '
 
 # java
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home
 
 # go
 export PATH="$PATH:$HOME/go/bin"
@@ -137,7 +137,7 @@ function export_mlp_vars() {
 }
 
 # update OneMLP cli
-alias update_mlp="gsutil cp gs://jet-ml-infra-platform-artifacts/ml-platform/cli/latest/mlp-macos-py310.pex /Users/steven.locorotondo/.local/bin/mlp && chmod +x /Users/steven.locorotondo/.local/bin/mlp"
+alias update_mlp="gsutil cp gs://jet-ml-infra-platform-artifacts/ml-platform/cli/latest/mlp-macos.pex /Users/steven.locorotondo/.local/bin/mlp && chmod +x /Users/steven.locorotondo/.local/bin/mlp"
 
 # mlp cli dev
 alias mlp_dev="$HOME/Desktop/repos/ml-platform/dist/python.cli/mlp-macos.pex"
@@ -189,12 +189,16 @@ export PATH="/usr/local/opt/mysql@8.0/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/google-cloud-sdk/path.zsh.inc'; fi
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
 
 # The next line enables shell command completion for gcloud.
 if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi
 
 # set python interpreter for gcloud cli
 export CLOUDSDK_PYTHON="$HOME/.pyenv/versions/3.11.8/bin/python"
+
+# dotnet
+export PATH="$PATH:/Users/steven.locorotondo/.dotnet/tools"
 
 # uv shell autocomplete
 eval "$(uv generate-shell-completion zsh)"
