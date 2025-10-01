@@ -1,9 +1,13 @@
-theme = OneHalfDark
+theme = One Half Dark
 
 # spacing between lines
 adjust-cell-height = 30%
 
 copy-on-select = true
+
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
 
 # background-opacity = 0.995
 
