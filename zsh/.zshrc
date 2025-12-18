@@ -98,6 +98,7 @@ alias gc="git branch | grep -v '^\*' | fzf --height=20% --info=inline | xargs gi
 alias gcb="git checkout -b"
 alias gl="git log --oneline --graph --color --all --decorate"
 alias gr="git fetch && git rebase origin/master"
+alias gp="git pull"
 
 function gsq() {
   # git squash
