@@ -174,7 +174,7 @@ function pyclean() {
 }
 
 # aws
-alias awslogin="profile=\$(aws configure list-profiles | fzf); if [[ -n \$profile ]]; then aws sso login --profile \"\$profile\"; fi"
+alias awsl="profile=\$(aws configure list-profiles | fzf); if [[ -n \$profile ]]; then aws sso login --profile \"\$profile\"; fi"
 
 # gcp kubernetes auth, prevents error in astro-ml-local
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
