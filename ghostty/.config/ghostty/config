@@ -1,4 +1,4 @@
-theme = One Half Dark
+theme = Nvim Dark
 
 # spacing between lines
 adjust-cell-height = 30%
