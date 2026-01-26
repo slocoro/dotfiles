@@ -15,10 +15,9 @@ added_style = 'bold blue'
 format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
 
 [git_branch]
+format = "on [$symbol$branch(:$remote_branch)]($style) "
 symbol = " "
-# truncation_length = 4
-truncation_symbol = ''
-# ignore_branches = ['master', 'main']
+style = "purple"
 
 [git_status]
 disabled = true
@@ -54,7 +53,9 @@ symbol = " "
 symbol = " "
 
 [directory]
+style = "cyan"
 read_only = " 󰌾"
+
 
 [docker_context]
 symbol = " "
