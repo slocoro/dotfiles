@@ -1,4 +1,5 @@
-theme = Nvim Dark
+# theme = Nvim Dark
+theme = Catppuccin Mocha
 
 # spacing between lines
 adjust-cell-height = 30%
@@ -11,7 +12,8 @@ shell-integration-features = no-cursor
 
 # background-opacity = 0.995
 
-font-family = JetBrainsMono NFM Thin
+font-family = JetBrainsMono NFM
+# font-family = JetBrainsMono NFM Thin
 font-size = 14
 font-feature = -calt
 font-feature = -dlig
