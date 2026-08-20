@@ -22,4 +22,12 @@ for package in "${packages[@]}"; do
   stow --target="$HOME" "$package"
 done
 
+UV_TOOLS=(
+  pyrefly
+)
+
+for tool in "${UV_TOOLS[@]}"; do
+  uv tool install "$tool"
+done
+
 echo "Done."
