@@ -21,7 +21,9 @@ More info [here](https://www.gnu.org/software/stow/manual/stow.html).
 Clone repo into home directory:
 
 ```
-git clone https://github.com/slocoro/dotfiles ~/
+<!-- git clone https://github.com/slocoro/dotfiles ~/ -->
+git clone https://github.com/slocoro/dotfiles ~/dotfiles
+
 ```
 
 ## Usage
@@ -32,13 +34,8 @@ Install a package:
 stow zsh
 ```
 
-To track a new set of dotfiles create a directory in the root of this project and copy the contents of the package using `rsnyc` to maintain the directory structure
+To track a new set of dotfiles create a directory in the root of this project and copy the contents of the package using `rsync` to maintain the directory structure
 
 ```
 rsync -R .config/karabiner/karabiner.json dotfiles/karabiner
 ```
-
-### TODO
-
-- automate installation of all packages using script
-
