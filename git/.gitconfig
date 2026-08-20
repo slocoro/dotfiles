@@ -1,0 +1,23 @@
+[user]
+	name = Steven Locorotondo
+
+[core]
+	safecrlf = false
+	ignorecase = true
+	autocrlf = input
+	editor = nvim
+
+[pull]
+	rebase = true
+
+[includeIf "gitdir:~/work/"]
+    path = ~/.gitconfig-work
+
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+
+[branch]
+	sort = -committerdate
