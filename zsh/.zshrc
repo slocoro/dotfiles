@@ -20,9 +20,9 @@ export PATH="$PATH:$HOME/go/bin"
 export PATH="$HOME/.local/bin:$PATH"
 
 # pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv > /dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# command -v pyenv > /dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
 
 # standard text editor
 export EDITOR="nv"
@@ -199,7 +199,7 @@ source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
 if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi
 
 # set python interpreter for gcloud cli
-export CLOUDSDK_PYTHON="$HOME/.pyenv/versions/3.11.8/bin/python"
+export CLOUDSDK_PYTHON="$HOME/.local/bin/python
 
 # dotnet
 export PATH="$PATH:/Users/steven.locorotondo/.dotnet/tools"
