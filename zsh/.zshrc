@@ -199,7 +199,7 @@ source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
 if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi
 
 # set python interpreter for gcloud cli
-export CLOUDSDK_PYTHON="$HOME/.local/bin/python
+export CLOUDSDK_PYTHON="$HOME/.local/bin/python"
 
 # dotnet
 export PATH="$PATH:/Users/steven.locorotondo/.dotnet/tools"
