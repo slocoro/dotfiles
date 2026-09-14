@@ -43,7 +43,7 @@ To set up a new machine, run the bootstrap script:
 ./bootstrap.sh
 ```
 
-The bootstrap script installs the packages defined in the `Brewfile` and then uses `stow` to install the configured dotfile packages.
+The bootstrap script installs the packages defined in the `Brewfile`, uses `stow` to install the configured dotfile packages, and installs TPM and the tmux plugins declared in `.tmux.conf`.
 
 The intention is that a new development environment can be recreated from a clean machine with:
 

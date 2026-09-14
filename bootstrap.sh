@@ -22,6 +22,16 @@ for package in "${packages[@]}"; do
   stow --target="$HOME" "$package"
 done
 
+TPM_DIR="$HOME/.tmux/plugins/tpm"
+
+if [[ ! -d "$TPM_DIR" ]]; then
+  echo "Installing tmux plugin manager..."
+  git clone --depth 1 https://github.com/tmux-plugins/tpm "$TPM_DIR"
+fi
+
+echo "Installing tmux plugins..."
+"$TPM_DIR/bin/install_plugins"
+
 UV_TOOLS=(
   pyrefly
 )
