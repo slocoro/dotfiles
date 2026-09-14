@@ -190,16 +190,15 @@ export PATH="/usr/local/opt/mysql-client@8.0/bin:$PATH"
 export PATH="/usr/local/opt/mysql@8.0/bin:$PATH"
 
 . "$HOME/.cargo/env"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/google-cloud-sdk/path.zsh.inc'; fi
 source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
-
-# The next line enables shell command completion for gcloud.
-if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi
 
 # set python interpreter for gcloud cli
 export CLOUDSDK_PYTHON="$HOME/.local/bin/python"
+
+# update PATH for the Google Cloud SDK.
+if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
+# enable shell command completion for gcloud.
+if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
 
 # dotnet
 export PATH="$PATH:/Users/steven.locorotondo/.dotnet/tools"
