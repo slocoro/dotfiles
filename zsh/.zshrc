@@ -189,8 +189,8 @@ export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 export PATH="/usr/local/opt/mysql-client@8.0/bin:$PATH"
 export PATH="/usr/local/opt/mysql@8.0/bin:$PATH"
 
-. "$HOME/.cargo/env"
-source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+# . "$HOME/.cargo/env"
+# source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
 
 # set python interpreter for gcloud cli
 export CLOUDSDK_PYTHON="$HOME/.local/bin/python"
@@ -209,8 +209,8 @@ eval "$(uv generate-shell-completion zsh)"
 # starship command line prompt
 eval "$(starship init zsh)"
 
-# go task completion
-eval "$(task --completion zsh)"
+# # go task completion
+# eval "$(task --completion zsh)"
 
 # load syntx highlighting (should be last)
 source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
