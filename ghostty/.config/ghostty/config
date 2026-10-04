@@ -2,7 +2,7 @@
 theme = Catppuccin Mocha
 
 # spacing between lines
-adjust-cell-height = 30%
+adjust-cell-height = 18%
 
 copy-on-select = true
 
@@ -30,4 +30,5 @@ window-inherit-working-directory = false
 
 ### KEYBINDS
 # keybind = global:§=toggle_quick_terminal
-keybind = shift+enter=text:\n
+# Send Shift-Enter as Alt-Enter so multiline input works through tmux.
+keybind = shift+enter=text:\x1b\r
