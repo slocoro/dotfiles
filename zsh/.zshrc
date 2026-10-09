@@ -78,13 +78,12 @@ tmux_session() {
 alias ts=tmux_session
 
 # aliases
-alias config="cd ~/.config"
-alias dotfiles="cd ~/dotfiles"
 alias home="cd ~"
-alias notes="cd ~/Desktop/notes"
-alias oss="cd ~/oss"
-alias study="cd ~/study"
+alias dotfiles="cd ~/dotfiles"
 alias work="cd ~/repos"
+alias study="cd ~/study"
+alias oss="cd ~/oss"
+alias config="cd ~/.config"
 
 alias cat="bat"
 
