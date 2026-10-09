@@ -31,4 +31,4 @@ window-inherit-working-directory = false
 ### KEYBINDS
 # keybind = global:§=toggle_quick_terminal
 # Send Shift-Enter as Alt-Enter so multiline input works through tmux.
-keybind = shift+enter=text:\x1b\r
+# keybind = shift+enter=text:\x1b\r
