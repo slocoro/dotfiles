@@ -40,7 +40,7 @@ fi
 tmux_session() {
   # TODO: make directroy list nice
   local dir_name
-  dir_name=$(find ~/Desktop/repos ~/Desktop/oss ~/Desktop/study -type d ! -name '.*' -maxdepth 1 | fzf)
+  dir_name=$(find ~/repos ~/oss ~/study -type d ! -name '.*' -maxdepth 1 | fzf)
   # exit if no directory selected
   [[ -z "$dir_name" ]] && echo "No directory selected. Exiting..." && return 0
 
@@ -79,9 +79,9 @@ alias ts=tmux_session
 
 # aliases
 alias home="cd ~"
-alias work="cd ~/Desktop/repos"
-alias study="cd ~/Desktop/study"
-alias oss="cd ~/Desktop/oss"
+alias work="cd ~/repos"
+alias study="cd ~/study"
+alias oss="cd ~/oss"
 alias notes="cd ~/Desktop/notes"
 alias config="cd ~/.config"
 
