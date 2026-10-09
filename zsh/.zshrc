@@ -80,6 +80,7 @@ alias ts=tmux_session
 # aliases
 alias home="cd ~"
 alias work="cd ~/repos"
+alias dotfiles="cd ~/dotfiles"
 alias study="cd ~/study"
 alias oss="cd ~/oss"
 alias notes="cd ~/Desktop/notes"
