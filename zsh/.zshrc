@@ -25,7 +25,7 @@ export PATH="$HOME/.local/bin:$PATH"
 # eval "$(pyenv init -)"
 
 # standard text editor
-export EDITOR="nv"
+export EDITOR="nvim"
 
 # fzf commands for shell (ctrl-r to fuzzy find history)
 source <(fzf --zsh)
