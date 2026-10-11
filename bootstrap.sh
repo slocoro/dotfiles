@@ -36,8 +36,18 @@ UV_TOOLS=(
   pyrefly
 )
 
+echo "Installing uv tools..."
 for tool in "${UV_TOOLS[@]}"; do
   uv tool install "$tool"
 done
+
+NPM_TOOLS=(
+  @vtsls/language-server
+  @biomejs/biome
+  yaml-language-server
+)
+
+echo "Installing npm tools..."
+npm install -g "${NPM_TOOLS[@]}"
 
 echo "Done."
