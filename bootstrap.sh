@@ -42,8 +42,10 @@ for tool in "${UV_TOOLS[@]}"; do
 done
 
 NPM_TOOLS=(
+  dockerfile-language-server-nodejs
   @vtsls/language-server
   @biomejs/biome
+  vscode-langservers-extracted
   yaml-language-server
 )
 
